@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5WMJ5TRPBJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5WMJ5TRPBJ');
+</script>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iSync Hub — Your Brand’s Digital Voice</title>
+  <meta name="description" content="iSync Hub is a digital marketing studio helping brands grow with SEO, PPC, content, and more. Your Brand’s Digital Voice." />
+  <link rel="icon" href="logo.png" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --brand: #24A19C;
+      --brand-light: #FAEEE7;
+      --accent: #325288;
+      --shadow: 0 10px 30px rgba(36,161,156,.3);
+      --radius: 18px;
+      --maxw: 1200px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 16px/1.6 system-ui, sans-serif;
+      background: linear-gradient(180deg,#0b1226 0%, #0f172a 35%, #0a1517 100%);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--maxw); margin: auto; padding: 24px; }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(15,23,42,.7);
+      backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav__inner { display: flex; justify-content: space-between; align-items: center; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand img { 
+  width: 80px; 
+  height: 80px; 
+  border-radius: 20%; /* Makes it a circle */
+  object-fit: cover;  /* Ensures it doesn’t get squished */
+}
+
+    .nav__links { display: flex; gap: 18px; }
+    .nav__links a {
+      padding: 10px 14px; border-radius: 10px; color: var(--text);
+    }
+    .nav__cta {
+      background: var(--brand); color: #052524; box-shadow: var(--shadow);
+    }
+    .nav__toggle { display: none; background: transparent; color: var(--text); }
+    @media (max-width: 860px) {
+      .nav__links { display: none; }
+      .nav__toggle { display: inline-flex; }
+      .nav.open .nav__links {
+        display: flex; flex-direction: column;
+        position: absolute; left: 0; right: 0; top: 100px;
+        background: #0b1226; padding: 14px 24px;
+      }
+    }
+
+    /* HERO */
+    .hero { padding: 80px 0; text-align: center; }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px; border-radius: 999px;
+      background: rgba(36,161,156,.12); border: 1px solid rgba(36,161,156,.25);
+      color: var(--brand);
+    }
+    .headline {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 900; margin: 16px 0;
+    }
+    .sub { color: var(--muted); max-width: 65ch; margin: 0 auto; }
+    .cta { margin-top: 24px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 12px 20px; border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: #0d1b1d; color: var(--text);
+      transition: transform .15s ease;
+    }
+    .btn--primary {
+      background: linear-gradient(135deg,var(--brand), var(--accent));
+      color: var(--brand-light); border: 0; box-shadow: var(--shadow);
+    }
+    .btn:hover { transform: translateY(-2px); }
+
+    /* SECTION */
+    .section { padding: 70px 0; }
+    .section__title { font-size: clamp(24px, 3vw, 36px); margin-bottom: 8px; text-align: center; }
+    .section__lead { color: var(--muted); text-align: center; margin-bottom: 40px; }
+    .grid {
+      display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    }
+    .card {
+      background: var(--card); padding: 22px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .card h3 { margin-top: 0; }
+
+    /* SOCIAL */
+    .social-fixed {
+      position: fixed; bottom: 20px; right: 20px;
+      display: flex; flex-direction: column; gap: 12px; z-index: 100;
+    }
+    .social-fixed a {
+      width: 48px; height: 48px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--brand); color: #052524; font-size: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .social-fixed a:hover { transform: scale(1.1); }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding: 28px 0; text-align: center; color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#top">
+        <img src="logo.png" alt="iSync Hub logo" />
+      </a>
+      <nav class="nav__links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="nav__cta">Contact</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top" class="hero">
+    <span class="badge">Your Brand’s Digital Voice</span>
+    <h1 class="headline">Welcome to iSync Hub</h1>
+    <p class="sub">We help brands grow with SEO, ads, content, and design. At iSync Hub, we sync your business with the digital future.</p>
+    <div class="cta">
+      <a href="#services" class="btn btn--primary">Explore Services</a>
+      <a href="#contact" class="btn">Chat on WhatsApp</a>
+    </div>
+  </main>
+
+  <!-- ABOUT -->
+  <section id="about" class="section container">
+    <h2 class="section__title">Who We Are</h2>
+    <p class="section__lead">
+      We’re a passionate digital marketing studio dedicated to helping businesses thrive online.
+      From creating compelling content and running high-converting ad campaigns to optimizing your website for search engines, we provide end-to-end solutions. 
+      Our mission is to build your brand’s digital voice, increase visibility, and drive meaningful engagement with your audience.
+      Whether you’re a small startup or an established enterprise, we tailor our strategies to meet your unique goals and ensure measurable results.
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section container">
+    <h2 class="section__title">Services We Offer</h2>
+    <p class="section__lead">Our strategies are designed to put your brand ahead of the competition.</p>
+    <div class="grid">
+      <article class="card"><h3>Search Engine Optimization (SEO)</h3><p>Boost visibility and attract organic traffic with tailored SEO strategies.</p></article>
+      <article class="card"><h3>Pay-Per-Click Advertising (PPC)</h3><p>Drive instant traffic and conversions with data-driven paid ad campaigns.</p></article>
+      <article class="card"><h3>Content Marketing</h3><p>Create engaging, SEO-friendly content that builds authority and trust.</p></article>
+      <article class="card"><h3>Social Media Marketing (SMM)</h3><p>Connect with your audience and grow your brand on all social platforms.</p></article>
+      <article class="card"><h3>Email Marketing</h3><p>Turn leads into customers with targeted, personalized email campaigns.</p></article>
+      <article class="card"><h3>Influencer Marketing</h3><p>Collaborate with influencers to expand your reach and credibility.</p></article>
+      <article class="card"><h3>Web Design & Development</h3><p>Build beautiful, responsive websites that convert visitors into customers.</p></article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+<section id="contact" class="section container">
+  <h2 class="section__title">Are You Ready to Grow?</h2>
+  <p class="section__lead">Let’s discuss how iSync Hub can take your business to the next level.</p>
+  
+  <div class="cta" style="justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 20px;">
+    <a href="https://wa.me/message/V66B7UE2F74CA1" class="btn btn--primary" target="_blank">Chat on WhatsApp</a>
+    <a href="tel:+919657143920" class="btn btn--primary" id="callBtn">Call Us</a>
+
+<script>
+  document.getElementById('callBtn').addEventListener('click', function(e){
+    if(!navigator.userAgent.match(/Mobi/)) { // not a mobile device
+      e.preventDefault();
+      const phone = '+91 9657143920';
+      navigator.clipboard.writeText(phone).then(() => {
+        alert('Phone number copied to clipboard: ' + phone);
+      });
+    }
+  });
+</script>
+
+  </div>
+  
+  <p style="margin-top:20px; text-align:center;">We’re here to answer your questions anytime!</p>
+</section>
+
+
+  <!-- SOCIAL FIXED -->
+  <div class="social-fixed">
+    <a href="https://www.facebook.com/people/ISync-Hub/61580431466933" target="_blank" aria-label="Facebook"><img src="facebook.png" alt="Facebook" /></a>
+    <a href="https://www.instagram.com/isync_hub" target="_blank" aria-label="Instagram"><img src="instagram.png" alt="Instagram" /></a>
+    <a href="https://www.linkedin.com/company/isync-hub" target="_blank" aria-label="LinkedIn"><img src="linkedin.png" alt="LinkedIn" /></a>   
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 iSync Hub. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const nav = document.querySelector('.nav');
+    const toggle = document.getElementById('navToggle');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
